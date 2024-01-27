@@ -28,26 +28,43 @@ const OuterBox = styled.div`
     'main__card profile__pic__card'
     'main__card right__side__panel';
   grid-gap: 10px;
+  padding-top: 70px;
 `;
 
 const TabBar = styled.div`
   grid-area: tab__bar;
   background-color: green;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const MainCard = styled.div`
   grid-area: main__card;
   background-color: blue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ProfilePicCard = styled.div`
   grid-area: profile__pic__card;
   background-color: purple;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const RightSidePanel = styled.div`
   grid-area: right__side__panel;
   background-color: red;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Layout;
