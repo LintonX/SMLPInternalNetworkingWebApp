@@ -27,7 +27,7 @@ const OuterBox = styled.div`
 
 const ProfilePicCard = styled.div`
   grid-area: profile__pic__card;
-  background-color: purple;
+  background-color: #bcc7d2;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ const ProfilePicCard = styled.div`
 
 const RightSidePanel = styled.div`
   grid-area: right__side__panel;
-  background-color: red;
+  background-color: #bcc7d2;
   border-radius: 15px;
   display: flex;
   justify-content: center;

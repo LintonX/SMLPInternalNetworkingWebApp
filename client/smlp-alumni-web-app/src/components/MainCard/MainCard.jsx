@@ -117,9 +117,9 @@ const PostContainer = styled.div`
 
 const CalendarContainer = styled.div`
     display: flex;
+    justify-content: center;
     padding: 10px;
     padding-top: 30px;
-    padding-left: 20px;
     width: 100%;
     height: 100%;
 
