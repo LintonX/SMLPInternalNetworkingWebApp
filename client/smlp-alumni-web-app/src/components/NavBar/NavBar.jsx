@@ -34,6 +34,7 @@ const NavContainer = styled.div`
   width: 100vw;
   height: 60px;
   justify-content: space-between;
+  z-index: 100;
 `;
 
 const LeftPane = styled.div``;
