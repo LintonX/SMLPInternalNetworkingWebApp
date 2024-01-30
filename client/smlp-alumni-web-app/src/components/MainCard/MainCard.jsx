@@ -34,8 +34,10 @@ function MainCard() {
         </Tab>
       </TabsBox>
       <PostContainer className={selectedTab === 1 ? "active__content1" : "nonactive__content"}>
-        <PostCard></PostCard>
-        <PostCard></PostCard>
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
       </PostContainer>
       <CalendarContainer className={selectedTab === 3 ? "active__content3" : "nonactive__content"}>
         <DateCard></DateCard>
@@ -100,7 +102,7 @@ const Tab = styled.div`
 const PostContainer = styled.div`
     padding: 10px;
     padding-top: 30px;
-    padding-left: 20px;
+    padding-left: 25px;
     display: flex;
     flex-direction: column;
     gap: 30px;

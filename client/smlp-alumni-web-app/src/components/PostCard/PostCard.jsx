@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
+
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 
 function PostCard() {
   const [toggleLike, setToggleLike] = useState(false);
@@ -15,15 +17,27 @@ function PostCard() {
     <PostBox>
       <Circle></Circle>
       <Post>
+        <div style={{paddingLeft: "70px", paddingRight: "40px", paddingTop: "14px", fontSize: ".8rem"}}>
+            <h3 style={{fontSize:".7rem"}}>Xavier Linton, Student '24, Computer Science</h3>
+            <h3 style={{paddingTop:"10px"}}>Moving forward...</h3>
+            <p>
+                These posts containers will be dynamic in nature. The white post box will have a min
+                height and will have a max height. They will fit their content within this range so boxes 
+                should have some variation.
+            </p>
+        </div>
         <MetricsBar>
-          <LikeUnlike onClick={handleToggleLike}>
-            {toggleLike === false ? (
-              <ThumbUpOffAltIcon style={{ color: "#404040", fontSize: 25 }} />
-            ) : (
-              <ThumbUpAltIcon style={{ color: "#404040", fontSize: 25 }} />
-            )}
-          </LikeUnlike>
-          <div style={{display: "flex", marginRight: "25px"}}>
+          <div style={{ display: "flex", marginLeft: "17px", gap: "8px"}}>
+            <LikeUnlike onClick={handleToggleLike}>
+              {toggleLike === false ? (
+                <StyledThumbUpIconOff />
+              ) : (
+                <StyledThumbUpIconOn />
+              )}
+            </LikeUnlike>
+            <StyledCommentIcon />
+          </div>
+          <div style={{ display: "flex", marginRight: "25px" }}>
             <Likes>4 Likes</Likes>
             &nbsp;|&nbsp;
             <Comments>3 Comments</Comments>
@@ -80,8 +94,7 @@ const MetricsBar = styled.div`
 `;
 
 const LikeUnlike = styled.div`
-  cursor: pointer;
-  margin-left: 17px;
+    cursor: pointer;
 `;
 
 const Likes = styled.div`
@@ -92,6 +105,36 @@ const Likes = styled.div`
 const Comments = styled.div`
   cursor: pointer;
   color: #404040;
+`;
+
+const StyledThumbUpIconOff = styled(ThumbUpOffAltIcon)`
+  color: "#404040";
+  font-size: 23px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const StyledThumbUpIconOn = styled(ThumbUpAltIcon)`
+  color: "#404040";
+  font-size: 23px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const StyledCommentIcon = styled(CommentOutlinedIcon)`
+  color: "#404040";
+  font-size: 21px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export default PostCard;

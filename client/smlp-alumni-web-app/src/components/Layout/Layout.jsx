@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import MainCard from "../MainCard/MainCard";
+import ProfilePicCard from "../ProfilePicCard/ProfilePicCard";
 
 function Layout() {
   return (
@@ -7,7 +8,7 @@ function Layout() {
       {/* <TabBar>TabBar</TabBar> */}
       <MainCard>MainCard</MainCard>
       <ProfilePicCard>ProfilePicCard</ProfilePicCard>
-      <RightSidePanel>RightSidePanel</RightSidePanel>
+      <RightSidePanel>Resources&Announcements</RightSidePanel>
     </OuterBox>
   );
 }
@@ -20,19 +21,9 @@ const OuterBox = styled.div`
     "main__card profile__pic__card"
     "main__card right__side__panel";
   grid-gap: 15px;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-left: 140px;
   padding-right: 140px;
-`;
-
-const ProfilePicCard = styled.div`
-  grid-area: profile__pic__card;
-  background-color: #bcc7d2;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.40);
 `;
 
 const RightSidePanel = styled.div`
