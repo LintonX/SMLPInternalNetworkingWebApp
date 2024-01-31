@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import PostCard from "../PostCard/PostCard";
 import DateCard from "../DateCard/DateCard";
+import CreatePostCard from "../CreatePost/CreatePost";
 
 function MainCard() {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -34,6 +35,7 @@ function MainCard() {
         </Tab>
       </TabsBox>
       <PostContainer className={selectedTab === 1 ? "active__content1" : "nonactive__content"}>
+        <CreatePostCard />
         <PostCard />
         <PostCard />
         <PostCard />
@@ -54,6 +56,8 @@ const MainBox = styled.div`
   border-radius: 15px;
   box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.40);
   margin-right: 30px;
+  padding-bottom: 30px;
+  height: fit-content;
 `;
 
 const TabsBox = styled.div`
@@ -100,15 +104,11 @@ const Tab = styled.div`
 `;
 
 const PostContainer = styled.div`
-    padding: 10px;
     padding-top: 30px;
-    padding-left: 25px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 100%;
-    height: 100%;
-    
+
     &.active__content1 {
     }
 
@@ -132,6 +132,5 @@ const CalendarContainer = styled.div`
         display: none;
     }
 `;
-
 
 export default MainCard;
